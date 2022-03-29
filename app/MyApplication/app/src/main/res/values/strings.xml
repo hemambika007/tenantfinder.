@@ -7,4 +7,9 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="create_password">Create Password</string>
     <string name="password">Password</string>
+    <string name="hello_login_here">Hello! Login here</string>
+    <string name="enter_password">enter password</string>
+    <string name="register">register</string>
+    <string name="l">l</string>
+    <string name="already_registered_login_here">already registered ? login here</string>
 </resources>

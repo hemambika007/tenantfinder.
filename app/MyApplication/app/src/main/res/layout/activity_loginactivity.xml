@@ -11,42 +11,58 @@
         android:id="@+id/textView"
         android:layout_width="272dp"
         android:layout_height="56dp"
-        android:text="Login here"
+        android:layout_marginTop="74dp"
+        android:fontFamily="@font/abril_fatface"
+        android:text="@string/hello_login_here"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.748"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="88dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/email_adress"
         android:inputType="textEmailAddress"
         android:text="@string/email_adress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="207dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="230dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/password"
         android:inputType="textPassword"
-        android:text="enter password"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="274dp" />
+        android:text="@string/enter_password"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="225dp"
-        android:layout_height="41dp"
-        android:text="Login"
+        android:layout_height="48dp"
+        android:layout_marginTop="230dp"
+        android:text="@string/welcome"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="546dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 </android.support.constraint.ConstraintLayout>
