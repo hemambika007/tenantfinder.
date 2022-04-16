@@ -29,11 +29,11 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
         int profile= PropertyList.get(position).getImageview1();
         String username= PropertyList.get(position).getTextview();
         String location= PropertyList.get(position).getTextview2();
-        String Property= PropertyList.get(position).getTextview3();
+        String property= PropertyList.get(position).getTextview3();
         String mobile= PropertyList.get(position).getTextview4();
         String divider= PropertyList.get(position).getDivider();
 
-         holder.updateui(profile,username,location,Property,mobile,divider);
+         holder.updateui(profile,username,location,property,mobile,divider);
 
     }
 
@@ -62,7 +62,13 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
         }
 
         public void updateui(int profile, String username, String location, String property, String mobile, String divider) {
-            //write the remaining code here!
+            imageView.setImageResource(profile);
+            textView.setText(username);
+            textView2.setText(location);
+            textView3.setText(property);
+            textView4.setText(mobile);
+            divider.setText(divider);
+
         }
     }
 }
