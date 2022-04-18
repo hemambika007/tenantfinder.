@@ -28,28 +28,27 @@ import java.util.zip.Inflater;
 public class MainActivity2 extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMain2Binding binding;
 
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     List<dataclass>PropertyList;
-    Adapter adapter;
-    private Inflater ActivityMain2Binding;
+    adapterclass adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMain2Binding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main2);
 
-
+    recyclerView=findViewById(R.id.recyclerView);
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
 
+        initdata();
+        initRecyclerView();
 //            @Override
 //            public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -64,8 +63,6 @@ public class MainActivity2 extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
 
-        initdata();
-        initRecyclerView();
     }
 
     private void initdata() {
@@ -88,13 +85,10 @@ public class MainActivity2 extends AppCompatActivity {
 
     private void initRecyclerView() {
 
-        RecyclerView recyclerView;
-        layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(RecyclerView.VERTICAL);
-        RecyclerView.setLayoutManager(layoutManager);
-        adapter = (Adapter) new adapterclass(PropertyList);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new adapterclass(PropertyList,this);
         recyclerView.setAdapter(adapter);
-        adapterclass.notifyDataSetchanged();
+//        recyclerView.notifyDataSetchanged();
 
         }
     }

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +14,11 @@ import java.util.List;
 
 public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder> {
 
+    Context context;
     private List<dataclass> PropertyList;
 
-    public adapterclass (List<dataclass>PropertyList){ this .PropertyList=PropertyList; }
-
-    public static void notifyDataSetchanged() {
-    }
+    public adapterclass (List<dataclass>PropertyList, Context context){ this .PropertyList=PropertyList;
+    this.context=context;}
 
     @NonNull
     @Override
@@ -70,8 +70,6 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
             textView2.setText(location);
             textView3.setText(property);
             textView4.setText(mobile);
-            
-
         }
     }
 }
