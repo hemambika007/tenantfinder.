@@ -18,8 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class loginactivity extends AppCompatActivity {
-    EditText mEmail,mPassword;
-    Button mLoginBtn;
+    EditText Emailid,Password;
+    Button LoginBtn;
     FirebaseAuth fAuth;
 
     @Override
@@ -27,30 +27,30 @@ public class loginactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginactivity);
 
-        mEmail = findViewById(R.id.editTextTextEmailAddress2);
-        mPassword = findViewById(R.id.editTextTextPassword2);
+        Emailid = findViewById(R.id.editTextTextEmailAddress2);
+        Password = findViewById(R.id.editTextTextPassword2);
         fAuth = FirebaseAuth.getInstance();
-        mLoginBtn = findViewById(R.id.button2);
+        LoginBtn = findViewById(R.id.button2);
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+        LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-            String email = mEmail.getText ().toString().trim();
-            String password = mPassword.getText().toString().trim();
+            String email = Emailid.getText ().toString().trim();
+            String password = Password.getText().toString().trim();
 
             if (TextUtils.isEmpty (email)) {
-                mEmail.setError("Email is Required.");
+                Emailid.setError("Email is Required.");
                 return;
             }
 
             if (TextUtils.isEmpty (password)) {
-                mPassword.setError("Password is Required.");
+                Password.setError("Password is Required.");
                 return;
             }
 
             if (password. length() < 6) {
-                mPassword.setError("Password Must be >= 6 Characters");
+                Password.setError("Password Must be >= 6 Characters");
                 return;
             }
 

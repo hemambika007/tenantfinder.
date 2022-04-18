@@ -23,6 +23,7 @@ import com.example.myapplication.databinding.ActivityMain2Binding;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -33,6 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     List<dataclass>PropertyList;
     Adapter adapter;
+    private Inflater ActivityMain2Binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

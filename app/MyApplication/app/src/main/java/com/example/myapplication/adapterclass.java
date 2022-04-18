@@ -17,6 +17,9 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
 
     public adapterclass (List<dataclass>PropertyList){ this .PropertyList=PropertyList; }
 
+    public static void notifyDataSetchanged() {
+    }
+
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -67,7 +70,7 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
             textView2.setText(location);
             textView3.setText(property);
             textView4.setText(mobile);
-            divider.setText(divider);
+            
 
         }
     }

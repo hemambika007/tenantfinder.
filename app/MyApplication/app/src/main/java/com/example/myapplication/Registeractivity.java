@@ -19,9 +19,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Registeractivity extends AppCompatActivity {
-    EditText mFullName, mEmail, mPassword, mPhone;
-    Button mRegisterBtn;
-    TextView mLoginBtn;
+    EditText FullName, Emailid, Password, Mobilenumber;
+    Button RegisterBtn;
+    TextView LoginBtn;
     FirebaseAuth fAuth;
 
 
@@ -30,12 +30,12 @@ public class Registeractivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registeractivity);
 
-        mFullName = findViewById(R.id.editTextTextPersonName);
-        mEmail = findViewById(R.id.editTextTextEmailAddress);
-        mPassword = findViewById(R.id.editTextTextPassword);
-        mPhone = findViewById(R.id.editTextPhone2);
-        mRegisterBtn = findViewById(R.id.registerButton);
-        mLoginBtn = findViewById(R.id.textView4);
+        FullName = findViewById(R.id.editTextTextPersonName);
+        Emailid = findViewById(R.id.editTextTextEmailAddress);
+        Password = findViewById(R.id.editTextTextPassword);
+        Mobilenumber = findViewById(R.id.editTextPhone2);
+        RegisterBtn = findViewById(R.id.registerButton);
+        LoginBtn = findViewById(R.id.textView4);
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -46,25 +46,25 @@ public class Registeractivity extends AppCompatActivity {
         }
 
 
-        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
+        RegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = mEmail.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
+                String email = Emailid.getText().toString().trim();
+                String password = Password.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
-                    mEmail.setError("Email is Required.");
+                    Emailid.setError("Email is Required.");
                     return;
 
                 }
 
                 if (TextUtils.isEmpty(password)) {
-                    mPassword.setError("Password is Required.");
+                    Password.setError("Password is Required.");
                     return;
                 }
 
                 if (password.length() < 6) {
-                    mPassword.setError("Password Must be >= 6 Characters");
+                    Password.setError("Password Must be >= 6 Characters");
                     return;
                 }
 
