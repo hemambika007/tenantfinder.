@@ -30,7 +30,6 @@ public class MainActivity2 extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
 
     RecyclerView recyclerView;
-    LinearLayoutManager layoutManager;
     List<dataclass>PropertyList;
     adapterclass adapter;
 
@@ -41,10 +40,10 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
     recyclerView=findViewById(R.id.recyclerView);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+//        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
 
         initdata();
@@ -57,29 +56,29 @@ public class MainActivity2 extends AppCompatActivity {
 //        });
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
-
-    }
+//    @Override
+//    public boolean onSupportNavigateUp() {
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+//        return NavigationUI.navigateUp(navController, appBarConfiguration)
+//                || super.onSupportNavigateUp();
+//
+//    }
 
     private void initdata() {
 
         PropertyList = new ArrayList<>();
 
-        PropertyList.add(new dataclass(R.drawable.im1,"Ramesh","Hyderabad,Telangana.","Four storeyed building","Call for details:978xxxxx67","-----------------------------------------------------------------"));
+        PropertyList.add(new dataclass(R.drawable.im1,"Ramesh","Hyderabad,Telangana.","Four storeyed building","Call for details:978xxxxx67"));
 
-        PropertyList.add(new dataclass(R.drawable.im2,"Aditya","Mumbai,Maharashtra.","Residential villa","Call for details:956xxxxx92","-----------------------------------------------------------------"));
+        PropertyList.add(new dataclass(R.drawable.im2,"Aditya","Mumbai,Maharashtra.","Residential villa","Call for details:956xxxxx92"));
 
-        PropertyList.add(new dataclass(R.drawable.im3,"Divya","kolkata,West Bengal.","6 storeyed building ","Call for details:786xxxxx27","-----------------------------------------------------------------"));
+        PropertyList.add(new dataclass(R.drawable.im3,"Divya","kolkata,West Bengal.","6 storeyed building ","Call for details:786xxxxx27"));
 
-        PropertyList.add(new dataclass(R.drawable.im4,"Vijay Prakash","Sangareddy,Telangana.","plot available in commercial building ","Call for details:732xxxxx54","-----------------------------------------------------------------"));
+        PropertyList.add(new dataclass(R.drawable.im4,"Vijay Prakash","Sangareddy,Telangana.","plot available in commercial building ","Call for details:732xxxxx54"));
 
-        PropertyList.add(new dataclass(R.drawable.im5,"Nivetha","Mangalore,Karnataka.","6 acres of agricultural land ","Call for details:895xxxxx27","-----------------------------------------------------------------"));
+        PropertyList.add(new dataclass(R.drawable.im5,"Nivetha","Mangalore,Karnataka.","6 acres of agricultural land ","Call for details:895xxxxx27"));
 
-        PropertyList.add(new dataclass(R.drawable.im6,"Anmol","Indore,Madhya pradesh.","Duplex home in trinath ventures.","Call for details:996xxxxx61","-----------------------------------------------------------------"));
+        PropertyList.add(new dataclass(R.drawable.im6,"Anmol","Indore,Madhya pradesh.","Duplex home in trinath ventures.","Call for details:996xxxxx61"));
 
     }
 

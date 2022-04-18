@@ -7,16 +7,14 @@ public class dataclass {
     private String textview2;
     private String textview3;
     private String textview4;
-    private String divider;
 
     public dataclass(){}
-    public dataclass(int imageview1,String textview,String textview2 , String textview3, String textview4, String divider) {
+    public dataclass(int imageview1,String textview,String textview2 , String textview3, String textview4) {
         this.imageview1 = imageview1;
         this.textview = textview;
         this.textview2 = textview2;
         this.textview3 = textview3;
         this.textview4 = textview4;
-        this.divider = divider;
     }
 
     public int getImageview1() {
@@ -57,13 +55,5 @@ public class dataclass {
 
     public void setTextview4(String textview4) {
         this.textview4 = textview4;
-    }
-
-    public String getDivider() {
-        return divider;
-    }
-
-    public void setDivider(String divider) {
-        this.divider = divider;
     }
 }

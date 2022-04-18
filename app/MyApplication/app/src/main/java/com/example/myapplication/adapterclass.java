@@ -23,7 +23,7 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.page_design,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.page_design,parent,false);
         return new MyViewHolder(view);
     }
 
@@ -34,9 +34,8 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
         String location= PropertyList.get(position).getTextview2();
         String property= PropertyList.get(position).getTextview3();
         String mobile= PropertyList.get(position).getTextview4();
-        String divider= PropertyList.get(position).getDivider();
 
-         holder.updateui(profile,username,location,property,mobile,divider);
+         holder.updateui(profile,username,location,property,mobile);
 
     }
 
@@ -51,7 +50,6 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
          TextView textView2;
          TextView textView3;
          TextView textView4;
-         TextView divider;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
@@ -61,10 +59,9 @@ public class adapterclass extends RecyclerView.Adapter<adapterclass.MyViewHolder
             textView2= view.findViewById(R.id.textView2);
             textView3= view.findViewById(R.id.textView3);
             textView4= view.findViewById(R.id.textView4);
-            divider= view.findViewById(R.id.divider);
         }
 
-        public void updateui(int profile, String username, String location, String property, String mobile, String divider) {
+        public void updateui(int profile, String username, String location, String property, String mobile) {
             imageView.setImageResource(profile);
             textView.setText(username);
             textView2.setText(location);
